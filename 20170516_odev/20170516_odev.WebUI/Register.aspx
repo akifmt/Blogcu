@@ -18,7 +18,6 @@
                                     <asp:TextBox runat="server" ID="UserEMail" type="text" name="email" placeholder="Email Adresi" />  
                                     <asp:TextBox runat="server" ID="Password" TextMode="Password" type="password" placeholder="Şifre" />
                                     <asp:TextBox runat="server" ID="ConfirmPassword" TextMode="Password" type="password" placeholder="Şifre Doğrula" />   
-                                    <asp:FileUpload ID="FileUpload1" runat="server" />
                                     <asp:Button runat="server" type="submit" value="Register" Text="Kayıt" OnClick="CreateUser_Click" />
                                 </form>
                                 <p class="mb0">Üye olarak sözleşmeyi kabul etmiş olursunuz.
