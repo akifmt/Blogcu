@@ -40,7 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Blog\KategoriController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\20170516_odev.DAL\20170516_odev.DAL.csproj">
+      <Project>{9d0566c0-da1c-4028-9407-25a108c2dde7}</Project>
+      <Name>20170516_odev.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\20170516_odev.DTO\20170516_odev.DTO.csproj">
+      <Project>{d96af826-b0d6-4b56-880a-2521b72e0a9e}</Project>
+      <Name>20170516_odev.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\20170516_odev.Entity\20170516_odev.Entity.csproj">
+      <Project>{bbbc56e3-2ca1-48e7-b1da-115012511aaf}</Project>
+      <Name>20170516_odev.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

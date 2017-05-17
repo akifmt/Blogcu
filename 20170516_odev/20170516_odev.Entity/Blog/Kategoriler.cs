@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace _20170516_odev.Entity
 {
-    class Kategoriler
+    public class Kategoriler
     {
+        public int KategoriID { get; set; }
         public string KategoriAdi { get; set; }
     }
 }

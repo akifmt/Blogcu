@@ -31,6 +31,14 @@ namespace _20170516_odev.DAL.DALExtension
 
             IDbConnection cnn = DBSelect.CreateConnection(sDb);
             IDbCommand cmd = CommandSelect.CreateCommand(sDb);
+
+            if (cmd != null)
+            {
+                cnn.Close();
+                cmd.Parameters.Clear();
+            }
+
+
             cmd.CommandText = spName;
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Connection = cnn;

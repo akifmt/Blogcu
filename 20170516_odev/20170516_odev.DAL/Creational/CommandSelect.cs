@@ -19,6 +19,7 @@ namespace _20170516_odev.DAL.Creational
                 case Databases.MSSQL:
                     CommandInstance myCommand = CommandInstance.Instance;
                     commandInstance = myCommand.Command;
+                    commandInstance.Parameters.Clear();
                     break;
                 case Databases.MYSQL:
                     break;
@@ -30,4 +31,5 @@ namespace _20170516_odev.DAL.Creational
 
             return commandInstance;
         }
+    }
 }

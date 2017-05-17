@@ -16,24 +16,25 @@
         </div>
         <!--end of container-->
     </section>
+
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-md-9 col-md-push-3 mb-xs-24">
 
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
+                <form id="form1" class="text-left" runat="server">
+                    <div class="col-md-9 col-md-push-3 mb-xs-24">
 
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
 
-                </div>
-                <!--end of nine col-->
-                <div class="col-md-3 col-md-pull-9 hidden-sm">
-                    <div class="feature bordered text-center">
+                    </div>
+                    <!--end of nine col-->
+                    <div class="col-md-3 col-md-pull-9 hidden-sm">
+                        <div class="feature bordered text-center">
 
-                        <h4 class="uppercase">Giriş</h4>
-                        <div class="text-left">
+                            <h4 class="uppercase">Giriş</h4>
+                            <div class="text-left">
 
-                            <form id="form1" class="text-left" runat="server">
 
                                 <asp:PlaceHolder runat="server" ID="LoginStatus" Visible="false">
                                     <asp:Literal runat="server" ID="StatusText" />
@@ -44,55 +45,64 @@
                                     <asp:TextBox runat="server" ID="Password" TextMode="Password" class="mb0" type="password" placeholder="Şifre" />
                                     <asp:Button runat="server" OnClick="SignIn" Text="Giriş" type="submit" value="Login" />
 
-                                    <asp:Button ID="Button1" runat="server" Text="Kayıt" />
+                                    <asp:Button ID="Kayit" PostBackUrl="~/Register.aspx" runat="server" Text="Kayıt" />
                                 </asp:PlaceHolder>
                                 <asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
+
+                                    <asp:Button runat="server" PostBackUrl="~/index.aspx" Text="Makale Ekle" />
+                                    <asp:Button runat="server" PostBackUrl="~/index.aspx" Text="Yorum Onayla" />
 
                                     <asp:Button runat="server" OnClick="SignOut" Text="Çıkış" />
                                 </asp:PlaceHolder>
 
-                            </form>
+
+                            </div>
+                            <p class="mb0">
+                            </p>
+                        </div>
+                        <!--end of widget-->
+                        <div class="widget">
+                            <h6 class="title">Blog'da Ara</h6>
+                            <hr>
+
+                            <input class="mb0" type="text" placeholder="Ara" />
 
                         </div>
-                        <p class="mb0">
-                            
-                        </p>
+                        <!--end of widget-->
+
+                        <!--end of widget-->
+                        <div class="widget">
+                            <h6 class="title">Kategoriler</h6>
+                            <hr />
+                            <ul class="link-list">
+
+
+                                <asp:Repeater ID="Repeater1" runat="server">
+                                    <ItemTemplate>
+                                        <li>
+                                            <a href="#"><%# Eval("KategoriAdi") %>  </a>
+                                        </li>
+
+                                    </ItemTemplate>
+
+
+                                </asp:Repeater>
+
+
+
+
+
+                            </ul>
+                        </div>
+
                     </div>
-                    <!--end of widget-->
-                    <div class="widget">
-                        <h6 class="title">Blog'da Ara</h6>
-                        <hr>
-
-                        <input class="mb0" type="text" placeholder="Ara" />
-
-                    </div>
-                    <!--end of widget-->
-
-                    <!--end of widget-->
-                    <div class="widget">
-                        <h6 class="title">Kategoriler</h6>
-                        <hr />
-                        <ul class="link-list">
-
-
-                            <li>
-                                <a href="#">kate 01</a>
-                            </li>
-                            <li>
-                                <a href="#">kate 02</a>
-                            </li>
-                           
-                          
-                            
-                        </ul>
-                    </div>
-
-                </div>
-                <!--end of sidebar-->
+                    <!--end of sidebar-->
+                </form>
             </div>
             <!--end of container row-->
         </div>
         <!--end of container-->
     </section>
+
 
 </asp:Content>

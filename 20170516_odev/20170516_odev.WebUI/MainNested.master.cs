@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using _20170516_odev.BLL.Controller.Blog;
+using _20170516_odev.Entity;
+using _20170516_odev.Extension;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using System;
@@ -12,13 +15,24 @@ namespace WebApplication1
 {
     public partial class MainNested : System.Web.UI.MasterPage
     {
+        KategoriController _kateController;
+        public MainNested()
+        {
+            _kateController = new KategoriController();
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Kategorileri Getirir
+            List<Kategoriler> myList = _kateController.GetAll().ToList();
+            Helper.BindDataControl(myList, Repeater1);
+            
+
+
             if (!IsPostBack)
             {
                 if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
-                    StatusText.Text = string.Format("Hello {0}!!", HttpContext.Current.User.Identity.GetUserName());
+                    StatusText.Text = string.Format("Merhaba, {0}!!", HttpContext.Current.User.Identity.GetUserName());
                     LoginStatus.Visible = true;
                     LogoutButton.Visible = true;
                 }
@@ -40,11 +54,11 @@ namespace WebApplication1
                 var userIdentity = userManager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
 
                 authenticationManager.SignIn(new AuthenticationProperties() { IsPersistent = false }, userIdentity);
-                Response.Redirect("~/Blog.aspx");
+                Response.Redirect(Request.RawUrl);
             }
             else
             {
-                StatusText.Text = "Invalid username or password.";
+                StatusText.Text = "Yanlış Kullanıcı Adı veya Şifre.";
                 LoginStatus.Visible = true;
             }
         }

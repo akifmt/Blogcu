@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\20170516_odev.DTO\20170516_odev.DTO.csproj">
+      <Project>{d96af826-b0d6-4b56-880a-2521b72e0a9e}</Project>
+      <Name>20170516_odev.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\20170516_odev.Entity\20170516_odev.Entity.csproj">
+      <Project>{bbbc56e3-2ca1-48e7-b1da-115012511aaf}</Project>
+      <Name>20170516_odev.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

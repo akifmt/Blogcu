@@ -19,6 +19,7 @@ namespace _20170516_odev.DAL.Creational
                 case Databases.MSSQL:
                     DBInstance myConnection = DBInstance.Instance;
                     dbInstance = myConnection.Connection;
+                    dbInstance.Close();
                     break;
                 case Databases.MYSQL:
                     break;

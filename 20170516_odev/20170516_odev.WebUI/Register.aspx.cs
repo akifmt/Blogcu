@@ -23,9 +23,12 @@ namespace WebApplication1
             var userStore = new UserStore<IdentityUser>();
             var manager = new UserManager<IdentityUser>(userStore);
 
-            var user = new IdentityUser() { UserName = UserName.Text };
-            IdentityResult result = manager.Create(user, Password.Text);
+            var user = new IdentityUser();
+            user.UserName = UserName.Text;
+            user.Email = UserEMail.Text;
 
+            IdentityResult result = manager.Create(user, Password.Text);
+            
             if (result.Succeeded)
             {
                 StatusMessage.Text = string.Format(" {0} , Başarılı!", user.UserName);

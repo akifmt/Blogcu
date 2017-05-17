@@ -32,7 +32,7 @@ namespace _20170516_odev.DAL.Creational
         {
             get
             {
-                return "Server=.;Database=NORTHWND2;Integrated Security=true;MultipleActiveResultSets=true;";
+                return "server = MKF-PC\\SQLEXPRESS; database=Blogcu;Integrated Security=True; MultipleActiveResultSets=True" ;
             }
         }
 
