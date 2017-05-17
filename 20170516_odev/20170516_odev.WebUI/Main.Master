@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="_20170516_odev.WebUI.Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>Site Başlık</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/ytplayer.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/theme-startup.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css' />
+    <link href="http://fonts.googleapis.com/css?family=Poppins:100,300,400,600,700" rel="stylesheet" type="text/css" />
+    <link href="css/font-roboto.css" rel="stylesheet" type="text/css" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    
+        <div>
+
+            <div class="nav-container">
+                <a id="top"></a>
+                <nav class="">
+                    <div class="nav-bar">
+                        <div class="module left">
+                            <a href="index.aspx">
+                                <img class="logo logo-light" alt="Foundry" src="img/logo-light.png" />
+                                <img class="logo logo-dark" alt="Foundry" src="img/logo-dark.png" />
+                            </a>
+                        </div>
+                        <div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+                            <i class="ti-menu"></i>
+                        </div>
+                        <div class="module-group right">
+                            <div class="module left">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="index.aspx">Anasayfa
+                                    </a>
+
+                                    </li>
+                                    <li class="">
+                                        <a href="Blog.aspx">Blog
+                                    </a>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--end of menu module-->
+                            <div class="module widget-handle search-widget-handle left">
+                                <div class="search">
+                                    <i class="ti-search"></i>
+                                    <span class="title">Ara</span>
+                                </div>
+                                <div class="function">
+                                    <form class="search-form">
+                                        <input type="text" placeholder="Type Here" />
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="module widget-handle cart-widget-handle left">
+                                <div class="cart">
+                                    <i class="ti-bag"></i>
+                                    <span class="label number">2</span>
+                                    <span class="title">Shopping Cart</span>
+                                </div>
+                                <div class="function">
+                                    <div class="widget">
+                                        <h6 class="title">Shopping Cart</h6>
+                                        <hr>
+                                        <ul class="cart-overview">
+                                            <li>
+                                                <a href="#">
+                                                    <img alt="Product" src="img/shop-widget-1.png" />
+                                                    <div class="description">
+                                                        <span class="product-title">Canvas Backpack</span>
+                                                        <span class="price number">$39.90</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img alt="Product" src="img/shop-widget-2.png" />
+                                                    <div class="description">
+                                                        <span class="product-title">Vintage Camera</span>
+                                                        <span class="price number">$249.50</span>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <hr>
+                                        <div class="cart-controls">
+                                            <a class="btn btn-sm btn-filled" href="#">Checkout</a>
+                                            <div class="list-inline pull-right">
+                                                <span class="cart-total">Total: </span>
+                                                <span class="number">$289.40</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end of widget-->
+                                </div>
+                            </div>
+                            <div class="module widget-handle language left">
+                                <ul class="menu">
+                                    <li class="has-dropdown">
+                                        <a href="#">Türkçe</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">English</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--end of module group-->
+                    </div>
+                </nav>
+            </div>
+
+            <div class="main-container">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+
+
+
+
+                <footer class="footer-2 bg-dark">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 text-center">
+                                <a href="#">
+                                    <img alt="Logo" class="image-xs mb32 fade-on-hover" src="img/logo-light.png" />
+                                </a>
+                                <h5 class="fade-1-4">Tüm Hakları Saklıdır &copy; 2017
+                               
+                                    <br />
+                                    Blog</h5>
+                                <ul class="list-inline social-list mb0">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-twitter-alt"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-dribbble"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="ti-vimeo-alt"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--end of row-->
+                    </div>
+                    <!--end of container-->
+                </footer>
+
+            </div>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/bootstrap.min.js"></script>
+            <script src="js/flickr.js"></script>
+            <script src="js/flexslider.min.js"></script>
+            <script src="js/lightbox.min.js"></script>
+            <script src="js/masonry.min.js"></script>
+            <script src="js/twitterfetcher.min.js"></script>
+            <script src="js/spectragram.min.js"></script>
+            <script src="js/ytplayer.min.js"></script>
+            <script src="js/countdown.min.js"></script>
+            <script src="js/smooth-scroll.min.js"></script>
+            <script src="js/parallax.js"></script>
+            <script src="js/scripts.js"></script>
+        </div>
+ 
+</body>
+</html>
