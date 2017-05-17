@@ -40,6 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Creational\AdapterInstance.cs" />
+    <Compile Include="Creational\AdapterSelect.cs" />
+    <Compile Include="Creational\CommandInstance.cs" />
+    <Compile Include="Creational\CommandSelect.cs" />
+    <Compile Include="Creational\DBInstance.cs" />
+    <Compile Include="Creational\DBSelect.cs" />
+    <Compile Include="DALExtension\DALHelper.cs" />
+    <Compile Include="IRepositories\Blog\IMakale.cs" />
+    <Compile Include="IRepositories\IAdd.cs" />
+    <Compile Include="IRepositories\IDelete.cs" />
+    <Compile Include="IRepositories\IGetAll.cs" />
+    <Compile Include="IRepositories\IGetByID.cs" />
+    <Compile Include="IRepositories\IUpdate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
