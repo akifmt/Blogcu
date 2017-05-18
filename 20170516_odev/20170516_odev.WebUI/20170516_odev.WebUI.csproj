@@ -771,6 +771,7 @@
     <Content Include="js\twitterfetcher.min.js" />
     <Content Include="js\ytplayer.min.js" />
     <Content Include="MakaleEkle.aspx" />
+    <Content Include="MakaleYonetimi.aspx" />
     <Content Include="packages.config" />
     <Content Include="css\less\theme.less" />
     <Content Include="fonts\et-line.eot" />
@@ -867,6 +868,13 @@
     </Compile>
     <Compile Include="MakaleEkle.aspx.designer.cs">
       <DependentUpon>MakaleEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakaleYonetimi.aspx.cs">
+      <DependentUpon>MakaleYonetimi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakaleYonetimi.aspx.designer.cs">
+      <DependentUpon>MakaleYonetimi.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register.aspx.cs">
