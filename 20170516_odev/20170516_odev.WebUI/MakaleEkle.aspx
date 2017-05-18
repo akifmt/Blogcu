@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainNested.master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="_20170516_odev.WebUI.MakaleEkle" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MainNested.master" AutoEventWireup="true" CodeBehind="MakaleEkle.aspx.cs" Inherits="_20170516_odev.WebUI.MakaleEkle" ValidateRequest="false"  %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -11,7 +11,7 @@
         <asp:DropDownList ID="DropDownListKategori" runat="server" placeholder="Lütfen Kategori Seçiniz"></asp:DropDownList>
         <asp:FileUpload CssClass="btn" ID="FileUploadMakaleFoto" runat="server" text="Lütfen Resim Ekleyiniz Seçiniz " />
         <textarea class="ckeditor" id="editor1" runat="server" TextMode="MultiLine"></textarea>
-        <asp:Button ID="ButtonMakaleKaydet" type="submit" runat="server" Text="MAKALEYİ EKLE" />
+        <asp:Button ID="ButtonMakaleKaydet" type="submit" runat="server" Text="MAKALEYİ EKLE" OnClick="ButtonMakaleKaydet_Click" />
 
     </div>
 

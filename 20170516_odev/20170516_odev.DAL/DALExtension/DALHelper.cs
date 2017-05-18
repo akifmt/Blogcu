@@ -54,5 +54,39 @@ namespace _20170516_odev.DAL.DALExtension
 
             return DataReader;
         }
+
+        internal static Object ExecNonQuery(string spName, Databases sDb, ICollection<KeyValuePair<string, object>> param)
+        {
+            object Gelen;
+            IDbConnection cnn = DBSelect.CreateConnection(sDb);
+            IDbCommand cmd = CommandSelect.CreateCommand(sDb);
+
+            if (cnn.State == ConnectionState.Open)
+            {
+                cnn.Close();
+                cmd.Parameters.Clear();
+            }
+
+            cmd.CommandText = spName;
+
+            foreach (KeyValuePair<string,object> item in param)
+            {
+                cmd.Parameters.Add(ParameterSelect.CreateParameter(sDb, item.Key, item.Value));
+            }
+            
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = cnn;
+
+            if (cnn.State == ConnectionState.Closed)
+            {
+                cnn.Open();
+            }
+
+            Gelen = cmd.ExecuteNonQuery();
+
+            return Gelen;
+        }
+
+
     }
 }

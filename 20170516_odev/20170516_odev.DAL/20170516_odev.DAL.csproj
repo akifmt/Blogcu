@@ -46,6 +46,7 @@
     <Compile Include="Creational\CommandSelect.cs" />
     <Compile Include="Creational\DBInstance.cs" />
     <Compile Include="Creational\DBSelect.cs" />
+    <Compile Include="Creational\ParameterSelect.cs" />
     <Compile Include="DALExtension\DALHelper.cs" />
     <Compile Include="IRepositories\Blog\IKategori.cs" />
     <Compile Include="IRepositories\Blog\IMakale.cs" />
