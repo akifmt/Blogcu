@@ -20,7 +20,6 @@ namespace _20170516_odev.DAL.Repositories.Blog
             int sonuc;
 
             Dictionary<string, object> param = new Dictionary<string, object>();
-
             
             param.Add("@Baslık", yeniMak.Baslik);
             param.Add("@Icerik", yeniMak.Icerik);
@@ -39,7 +38,27 @@ namespace _20170516_odev.DAL.Repositories.Blog
 
         public ICollection<Makaleler> GetAll()
         {
-            throw new NotImplementedException();
+            ICollection<Makaleler> returnList = new List<Makaleler>();
+            DbDataReader dr = (DbDataReader)DALHelper.ExecReader("GetMakaleWithKategori", Databases.MSSQL);
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    Makaleler maka = new Makaleler();
+                    maka.Kategori = new Kategoriler();
+                    maka.MakaleID = Convert.ToInt32(dr["MakaleID"] == null ? 0 : dr["MakaleID"]);
+                    maka.Baslik = dr["Baslık"] == null ? "" : dr["Baslık"].ToString();
+                    maka.Icerik = dr["Icerik"] == null ? "" : dr["Icerik"].ToString();
+                    maka.KategoriID = Convert.ToInt32(dr["KategoriID"] == null ? 0 : dr["KategoriID"]);
+                    maka.YazarUserName = dr["YazarUserName"] == null ? "" : dr["YazarUserName"].ToString();
+                    maka.MakaleFotoPath = dr["MakaleFotoPath"] == null ? "" : dr["MakaleFotoPath"].ToString();
+                    maka.Kategori.KategoriAdi = dr["KategoriName"] == null ? "" : dr["KategoriName"].ToString();
+                    maka.Kategori.KategoriID = maka.KategoriID;
+                    returnList.Add(maka);
+                }
+            }
+            return returnList;
+            
         }
 
         public int Update(Makaleler parameter)

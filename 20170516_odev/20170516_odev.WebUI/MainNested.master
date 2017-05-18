@@ -49,7 +49,7 @@
                                 </asp:PlaceHolder>
                                 <asp:PlaceHolder runat="server" ID="LogoutButton" Visible="false">
 
-                                    <asp:Button runat="server" PostBackUrl="~/index.aspx" Text="Makale Ekle" />
+                                    <asp:Button runat="server" PostBackUrl="~/MakaleEkle.aspx" Text="Makale Ekle" />
                                     <asp:Button runat="server" PostBackUrl="~/index.aspx" Text="Yorum Onayla" />
 
                                     <asp:Button runat="server" OnClick="SignOut" Text="Çıkış" />

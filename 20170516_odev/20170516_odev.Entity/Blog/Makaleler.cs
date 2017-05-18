@@ -13,6 +13,7 @@ namespace _20170516_odev.Entity
         public string Icerik { get; set; }
         public string MakaleFotoPath { get; set; }
         public int KategoriID { get; set; }
+        public Kategoriler Kategori { get; set; }
         public string YazarUserName { get; set; }
         public int OkunmaSayisi { get; set; }
         public int ToplamPuan { get; set; }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿using _20170516_odev.BLL.Controller.Blog;
+using _20170516_odev.Entity;
+using _20170516_odev.Extension;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +12,21 @@ namespace WebApplication1
 {
     public partial class Blog : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+
+            MakaleController _mklController = new MakaleController();
+            protected void Page_Load(object sender, EventArgs e)
+            {
+                List<Makaleler> myList = _mklController.GetAll().ToList();
+                Helper.BindDataControl(myList, Repeater1);
+            }
+
+
+
+
+
+
+
+
 
         }
-    }
 }

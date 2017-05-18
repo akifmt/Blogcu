@@ -13,11 +13,20 @@ namespace _20170516_odev.Extension
         public static void BindDropDownList<T>(ICollection<T> _sourceList, DropDownList _dropDownList, string _dataValueField, string _dataTextField)
         {
             _dropDownList.DataSource = _sourceList;
-            
             _dropDownList.DataValueField = _dataValueField;
             _dropDownList.DataTextField = _dataTextField;
             _dropDownList.DataBind();
         }
+
+        public static void BindDropDownList<T>(ICollection<T> _sourceList, DropDownList _dropDownList, string _dataValueField, string _dataTextField, string _selectedValue)
+        {
+            _dropDownList.DataSource = _sourceList;
+            _dropDownList.DataValueField = _dataValueField;
+            _dropDownList.DataTextField = _dataTextField;
+            _dropDownList.SelectedValue = _selectedValue;
+            _dropDownList.DataBind();
+        }
+
 
         public static void BindDataControl<T>(ICollection<T> _sourceList, BaseDataBoundControl _dataControl)
         {
@@ -30,6 +39,7 @@ namespace _20170516_odev.Extension
             _repeater.DataSource = _sourceList;
             _repeater.DataBind();
         }
+        
 
         /*  DYNAMIC MESSAGE */
         /*
