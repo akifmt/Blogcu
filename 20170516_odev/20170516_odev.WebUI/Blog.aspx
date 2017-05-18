@@ -34,7 +34,7 @@
                 <p>
                     <%#Eval("Icerik")%>
                 </p>
-                <a class="btn btn-sm" href='blogsingle.aspx?<%#Eval("MakaleID")%>'>Devamını Oku</a>
+                <a class="btn btn-sm" href='blogsingle.aspx?MakaleID=<%#Eval("MakaleID")%>'>Devamını Oku</a>
             </div>
         </ItemTemplate>
     </asp:Repeater>

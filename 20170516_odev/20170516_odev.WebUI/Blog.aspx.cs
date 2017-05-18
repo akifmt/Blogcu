@@ -18,6 +18,8 @@ namespace WebApplication1
             {
                 List<Makaleler> myList = _mklController.GetAll().ToList();
                 Helper.BindDataControl(myList, Repeater1);
+
+
             }
 
 

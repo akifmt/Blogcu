@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Controller\Blog\KategoriController.cs" />
     <Compile Include="Controller\Blog\MakaleController.cs" />
+    <Compile Include="Controller\Blog\YorumlarController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

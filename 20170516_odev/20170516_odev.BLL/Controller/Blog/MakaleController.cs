@@ -27,6 +27,11 @@ namespace _20170516_odev.BLL.Controller.Blog
             return _makaleManagement.Add(yeniMak);
         }
 
+        public Makaleler GetByID(Makaleler param, int? param2)
+        {
+            return _makaleManagement.GetByID(param, param2);
+        }
+
 
     }
 }

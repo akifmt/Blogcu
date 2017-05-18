@@ -65,6 +65,36 @@ namespace _20170516_odev.DAL.Repositories.Blog
         {
             throw new NotImplementedException();
         }
+
+        public Makaleler GetByID(Makaleler parameter, int? parameter1)
+        {
+            Makaleler returnedMakale = new Makaleler();
+            returnedMakale.MakaleID = (int)parameter1;
+            
+            SqlDataReader dr = (SqlDataReader)DALHelper.ExecReader("sp_GetMakaleByID", Databases.MSSQL, (int)parameter1, "@MakaleID");
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    returnedMakale.Kategori = new Kategoriler();
+                    returnedMakale.MakaleID = Convert.ToInt32(dr["MakaleID"] == null ? 0 : dr["MakaleID"]);
+                    returnedMakale.Baslik = dr["Baslık"] == null ? "" : dr["Baslık"].ToString();
+                    returnedMakale.Icerik = dr["Icerik"] == null ? "" : dr["Icerik"].ToString();
+                    returnedMakale.KategoriID = Convert.ToInt32(dr["KategoriID"] == null ? 0 : dr["KategoriID"]);
+                    returnedMakale.YazarUserName = dr["YazarUserName"] == null ? "" : dr["YazarUserName"].ToString();
+                    returnedMakale.MakaleFotoPath = dr["MakaleFotoPath"] == null ? "" : dr["MakaleFotoPath"].ToString();
+                    //returnedMakale.Kategori.KategoriAdi = dr["KategoriName"] == null ? "" : dr["KategoriName"].ToString();
+                    returnedMakale.Kategori.KategoriID = returnedMakale.KategoriID;
+                }
+            }
+
+            return returnedMakale;
+        }
+
+
+
+
+
     }
 }
 

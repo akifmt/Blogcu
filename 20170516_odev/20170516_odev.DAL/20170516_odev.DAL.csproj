@@ -50,6 +50,7 @@
     <Compile Include="DALExtension\DALHelper.cs" />
     <Compile Include="IRepositories\Blog\IKategori.cs" />
     <Compile Include="IRepositories\Blog\IMakale.cs" />
+    <Compile Include="IRepositories\Blog\IYorum.cs" />
     <Compile Include="IRepositories\IAdd.cs" />
     <Compile Include="IRepositories\IDelete.cs" />
     <Compile Include="IRepositories\IGetAll.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Blog\KategoriManagement.cs" />
     <Compile Include="Repositories\Blog\MakaleManagement.cs" />
+    <Compile Include="Repositories\Blog\YorumlarManagemant.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\20170516_odev.Entity\20170516_odev.Entity.csproj">

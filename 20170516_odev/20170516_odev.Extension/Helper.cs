@@ -39,7 +39,9 @@ namespace _20170516_odev.Extension
             _repeater.DataSource = _sourceList;
             _repeater.DataBind();
         }
-        
+
+
+
 
         /*  DYNAMIC MESSAGE */
         /*
